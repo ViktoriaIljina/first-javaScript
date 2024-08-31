@@ -9,12 +9,14 @@ function calculateRentalCost(days) {
   const calcCount = pricePerDay * days;
   const sailForThreeMore = 20;
   const sailForSevenMore = 50;
+  const longPeriod = 7;
+  const shortPeriod = 3;
 
-  if (days >= 7) {
+  if (days >= longPeriod) {
     return calcCount - sailForSevenMore;
   }
 
-  if (days >= 3) {
+  if (days >= shortPeriod) {
     return calcCount - sailForThreeMore;
   }
 
